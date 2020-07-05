@@ -1,0 +1,106 @@
+{
+    "proof": "PROOOOF",
+    "educationTitle": "EDUCACIÓN UNIVERSITARIA",
+    "overviewTitle": "SEMBLANZA",
+    "certificationsTitle": "CERTIFICACIONES",
+    "otherCoursesTitle": "OTROS CURSOS",
+    "languagesTitle": "IDIOMAS",
+    "techTitle": "INFRAESTRUCTURA",
+    "programmingLangTitle": "Lenguajes de programación",
+    "framworksTitle": "FRAMEWORKS",
+    "professionalExperienceTitle": "EXPERIENCIA PROFESIONAL",
+    "language": "Lenguaje",
+    "framework": "Framework",
+    "education": {
+        "comScienceBach": {
+            "grade": "Lic.",
+            "career": "Cienceias de la Computación",
+            "state": "",
+            "thesis": ""
+        },
+        "philMaster": {
+            "grade": "Maestría",
+            "career": "Filosofía",
+            "state": "| Titulado con Honores",
+            "thesis": "Historia del cartesianismo en México 1950-2000. Una estética cartesiana"
+        },
+        "ecoSpecialization": {
+            "grade": "Especialización",
+            "career": "Historia del Pensamiento Económico",
+            "state": "| Titulado",
+            "thesis": "Historia de la constitución del ejército mexicano moderno"
+        },
+        "philBach": {
+            "grade": "Lic.",
+            "career": "Filosofía",
+            "state": "| Titulado con Honores",
+            "thesis": "Contribuciones para una estética cartesiana"
+        }
+    },
+    "certifications": {
+        "PY": {
+            "title": "Python data structures",
+            "host": "Edx / U. Michigan",
+            "state": "Acreditado"
+        },
+        "MCSA": {
+            "title": "MCSA: Web Applications",
+            "host": "Microsoft",
+            "state": "Cursando"
+        }
+    },
+    "courses": {
+        "course_1": {
+            "host": "Edx",
+            "course": "Introduction to IA",
+            "year":"2020"
+        },
+        "course_2": {
+            "host": "Udacity",
+            "course": "PWA.",
+            "year":"2019"
+        },
+        "course_3": {
+            "host": "Udacity",
+            "course": "Web optimization",
+            "year":"2018"
+        },
+        "course_4": {
+            "host": "BID",
+            "course": "Gestión de proyectos de desarrollo",
+            "year":"2018"
+        }
+    },
+    "languages": {
+        "language": {
+            "spanish": "Español",
+            "english": "Inglés",
+            "freanch": "Francés",
+            "latin": "Latín"
+        },
+        "skills": {
+            "language": "Idioma",
+            "reading": "Lectura",
+            "writing": "Escritura",
+            "speaking": "Conversación"
+        }
+        
+    },
+    "technologies": {
+        "th_1_WorkProcess": "Procesos de Trabajo",
+        "th_2_Servers": "Servidores",
+        "th_3_Architectures": "Arquitecturas",
+        "th_4_SO": "Sistemas Operativos",
+        "th_5_BD": "Bases de datos",
+        "th_6_Control_Version": "Controladores de versiones",
+        "th_7_Other": "DESPLIEGUE"
+    },
+    "professionalExp": {
+        "responsabilities": "Principales responsabilidades",
+        "techs": "Tecnologías",
+        "architecture": "Arquitectura"
+    }
+
+
+}
+

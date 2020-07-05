@@ -1,0 +1,16 @@
+
+.app-nav-bar {
+  width: 100%;
+  z-index: 1;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  /* overflow-x: hidden; */
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+ 

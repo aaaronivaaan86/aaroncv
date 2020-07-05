@@ -1,0 +1,19 @@
+
+.skills {
+    position: absolute;
+    display: flex;
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: gray ;
+    background-size: cover;
+    background-position: center center; 
+    margin: 0;
+    padding-top: 5vh;
+}
+
+.card {
+    margin-bottom: 5%;
+}
+/* .edu-cert-courses {
+    margin-top: 10vh;
+} */

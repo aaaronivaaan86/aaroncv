@@ -1,0 +1,209 @@
+
+<div class="row skills">
+
+    <div class="  col-lg-4 edu-cert-courses  ">
+        <!-- Studies -->
+        <div class="card">
+            <div class="card-header">
+                {{ 'educationTitle' | translate }}
+            </div>
+            <div class="card-body">
+                <ul *ngFor="let item of educationsArr">
+                    <li> {{  item.grade | translate }} {{  item.career | translate }} </li>
+                    <ul>
+                        <li> {{  item.university | translate }} | {{  item.years | translate }}
+                            {{  item.state | translate }} </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="card">
+            <div class="card-header">
+                {{ 'certificationsTitle' | translate }}
+            </div>
+            <div class="card-body">
+                <ul *ngFor="let item of certificationsArr">
+                    <li> {{  item.title  }} </li>
+                    <ul>
+                        <li> {{  item.host  }} | {{  item.state | translate }} </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="card">
+            <div class="card-header">
+                {{ 'otherCoursesTitle' | translate }}
+            </div>
+            <div class="card-body">
+                <ul *ngFor="let item of coursessArr">
+                    <li> {{  item.course  }} | {{  item.host  }} | {{  item.year  }} </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <!-- Languages -->
+        <div class="card">
+            <div class="card-header">
+                {{ 'languagesTitle' | translate }}
+            
+            </div>
+            <div class="card-body text-center ">
+                <table class="table table-striped  table-hover">
+                    <thead class="thead-dark">
+                        <th *ngFor="let item of languagesHeadersArr">
+                            {{  item | translate}}
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of languagesArr">
+                            <td> {{ item.name | translate }} </td>
+                            <td> {{ item.reading }} </td>
+                            <td> {{ item.writing }} </td>
+                            <td> {{ item.speaking }} </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="card">
+            <div class="card-header">
+                {{ 'languagesTitle' | translate }}
+            
+            </div>
+            <div class="card-body">
+                <div>
+                    <div>
+                        <div style="display: block">
+                        <canvas baseChart
+                            [datasets]="barChartData"
+                            [labels]="barChartLabels"
+                            [options]="barChartOptions"
+                            [legend]="barChartLegend"
+                            [chartType]="barChartType">
+                        </canvas>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="card">
+            <div class="card-header">
+                {{ 'framworksTitle' | translate }}
+            </div>
+            <div class="card-body">
+                <table class="table  table-hover">
+                    <thead class="thead-dark">
+                        <th> {{ 'language' | translate }}</th>
+                        <th colspan="3"> {{ 'framework' | translate }} </th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of fwArr">
+                            <td > {{  item.lang }} </td>
+                            <td  *ngFor="let fw of item.fw">
+                                {{ fw.fw  }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-lg-4">
+        <!-- Techs -->
+        <div class="card">
+            <div class="card-header">
+                {{ 'techTitle' | translate }}
+            </div>
+            <div class="card-body">
+                <!-- Work Process -->
+                <table class="table  table-hover">
+                    <thead class="thead-dark">
+                        <th> {{ techTableHd[0] | translate }}  </th>
+                        <th> {{ techTableHd[1] | translate }}  </th>
+                        <th> {{ techTableHd[2] | translate }}  </th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of techs">
+                            <td> {{ item.wp }} </td>
+                            <td> {{ item.server }} </td>
+                            <td> {{ item.arch }} </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- OS -->
+        <div class="card">
+            <div class="card-header">
+                {{ techTableHd[3] | translate }}        
+            </div>
+            <div class="card-body">
+                <div class="d-flex">
+                    <div *ngFor="let item of os">
+                        <p>
+                            {{  item.so }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Base -->
+        <div class="card">
+            <div class="card-header">
+                {{ techTableHd[4] | translate }}
+            </div>
+            <div class="card-body">
+                <div class="d-flex">
+                    <div *ngFor="let item of db">
+                        <p>
+                            {{  item.name }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTROL VERSION -->
+        <div class="card">
+            <div class="card-header">
+                {{ techTableHd[5] | translate }}                
+            </div>
+            <div class="card-body">
+                <div class="d-flex">
+                    <div  *ngFor="let item of cv">
+                        {{  item.name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DEPLOY -->
+        <div class="card">
+            <div class="card-header">
+                {{ techTableHd[6] | translate }}
+            </div>
+            <div class="card-body">
+                <div class="d-flex">
+                    <div  *ngFor="let item of ot">
+                        {{  item.name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

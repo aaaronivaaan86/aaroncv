@@ -1,0 +1,17 @@
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.menu  a  {
+    padding: 5px 10px;
+    color: gray;
+}
+
+.menu a:hover   {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+

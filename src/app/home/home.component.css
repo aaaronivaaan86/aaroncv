@@ -1,0 +1,14 @@
+.home {
+    position: absolute;
+    display: flex;
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: hotpink ;
+    background-size: cover;
+    background-position: center center; 
+    margin: 0;
+}
+
+.text-white {
+    color: white;
+}
