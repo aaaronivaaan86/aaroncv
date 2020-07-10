@@ -1,0 +1,134 @@
+{
+    "proof": "PROOOOF",
+    "educationTitle": "EDUCATION",
+    "overviewTitle": "OVERVIEW",
+    "certificationsTitle": "CERTIFICATIONS",
+    "otherCoursesTitle": "OTHER COURSES",
+    "languagesTitle": "LANGUAGES",
+    "techTitle": "INFRAESTRUCTURE",
+    "programmingLangTitle": "PROGRAMMING LANGUAGES",
+    "framworksTitle": "FRAMEWORKS",
+    "professionalExperienceTitle": "WORK EXPERIENCE",
+    "language": "LANGUAGES",
+    "framework": "FRAMEWORK",
+    "education": {
+        "comScienceBach": {
+            "grade": "BAch.",
+            "career": "Computer Science",
+            "state": "",
+            "thesis": ""
+        },
+        "philMaster": {
+            "grade": "Master",
+            "career": "Philosophy",
+            "state": "| Graduated with honours",
+            "thesis": "History of mexican cartesianism,1950-2000. A cartesian aesthetic "
+        },
+        "ecoSpecialization": {
+            "grade": "Spesialization",
+            "career": "History of Economic Tought",
+            "state": "| Graded",
+            "thesis": "History of moder mexican army"
+        },
+        "philBach": {
+            "grade": "Bach.",
+            "career": "Philosophy",
+            "state": "| Graduated with honours",
+            "thesis": "Contributions to a cartesian aesthetic"
+        }
+    },
+    "certifications": {
+        "PY": {
+            "title": "Python data structures",
+            "host": "Edx / U. Michigan",
+            "state": "Accredited"
+        },
+        "MCSA": {
+            "title": "MCSA: Web Applications",
+            "host": "Microsoft",
+            "state": "Coursing"
+        }
+    },
+    "courses": {
+        "course_1": {
+            "host": "Edx",
+            "course": "Introduction to IA",
+            "year":"2020"
+        },
+        "course_2": {
+            "host": "Udacity",
+            "course": "PWA.",
+            "year":"2019"
+        },
+        "course_3": {
+            "host": "Udacity",
+            "course": "Web optimization",
+            "year":"2018"
+        },
+        "course_4": {
+            "host": "BID",
+            "course": "Development projects Managment",
+            "year":"2018"
+        }
+    },
+    "languages": {
+        "language": {
+            "spanish": "Spanish",
+            "english": "English",
+            "freanch": "French",
+            "latin": "Latin"
+        },
+        "skills": {
+            "language": "Language",
+            "reading": "Reading",
+            "writing": "Writing",
+            "speaking": "Speaking"
+        }
+        
+    },
+    "technologies": {
+        "th_1_WorkProcess": "Work Process",
+        "th_2_Servers": "Servers",
+        "th_3_Architectures": "Architectures",
+        "th_4_SO": "OPERATIVE SYSTEMS",
+        "th_5_BD": "DATA BASES",
+        "th_6_Control_Version": "VERSON CONTROLERS",
+        "th_7_Other": "DEPLOY"
+    },
+    "professionalExp": {
+        "responsabilities": "Main responsabilities",
+        "techs": "Technologies",
+        "architecture": "Architectures"
+    },
+    "experience": {
+        "main": {
+            "profesionalExperience": "PROFESSIONAL EXPERIENCE",
+            "personalProjects": "PERSONAL PROJECTS"  
+        },
+        "table": {
+            "responsabilities": "Main responsabilities",
+            "techs": "Technologies",
+            "arch": "Architectures"
+        },
+        "personal": {
+            "stylometry": {
+                "title": "Strings in the air. Stylometric contribution to the study of the Bolivar Echeverría's work."
+            },
+            "cartesianism": {
+                "title": "Mexican cartesianism"
+            },
+            "afiliator": {
+                "title": "Afiliator SP"
+            },
+            "report": {
+                "title": "Intelligent Report"
+            },
+            "cartography": {
+                "title": "Cartography of mexican literature. Sielces XIX-XX"
+            }
+        }
+    }
+
+
+}
+

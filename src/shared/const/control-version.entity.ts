@@ -1,20 +1,20 @@
 export const ControlVersion = [
     {
         id: 1,
-        name: 'Git Hub',
+        name: 'GitHub',
         class: 'green',
-        icon: ''
+        icon: '&#128025;'
     },
     {
         id: 2,
-        name: 'Azure',
+        name: 'TFS',
         class: 'green',
-        icon: ''
+        icon: '&#127938;'
     },
     {
         id: 3,
         name: 'GitLab',
         class: 'green',
-        icon: ''
+        icon: '&#129418;'
     }
 ]

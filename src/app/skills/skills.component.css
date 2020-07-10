@@ -9,11 +9,24 @@
     background-position: center center; 
     margin: 0;
     padding-top: 5vh;
+    font-size: 0.9rem;
 }
 
 .card {
     margin-bottom: 5%;
 }
-/* .edu-cert-courses {
-    margin-top: 10vh;
-} */
+.card-body {
+    display: contents;
+}
+
+
+.skill-sub-cont {
+    margin-left: 5%;
+
+}
+
+.lang-img {
+    width: 25%;
+}
+
+

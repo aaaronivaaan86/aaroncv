@@ -1,1 +1,43 @@
-<p>experience works!</p>
+<div class="row experience">
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                {{  'experience.main.profesionalExperience'  | translate  }}
+            </div>
+            <div class="card-body">
+                <ul *ngFor="let item of proffesional" >
+                    <li>  {{ item.title }}  </li>
+                    <ul>
+                        <li> {{ item.project }} </li>
+                        <li> <a [href]="item.link" target="_blank"  > {{ item.link }}</a>  </li>
+                        <li> {{ item.responsabilities }} </li>
+                        <li> {{ item.technologies }} </li>
+                        <li> {{ item.architecture }} </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                {{  'experience.main.personalProjects'  | translate  }}
+            </div>
+            <div class="card-body">
+                <ul *ngFor="let item of personalArr" >
+                    <li>  {{ item.title | translate }}  </li>
+                    <ul>
+                        <li> {{ item.project }} </li>
+                        <li> <a [href]="item.link" target="_blank"  > {{ item.link }}</a>  </li>
+                        <li> {{ item.responsabilities }} </li>
+                        <li> {{ item.technologies }} </li>
+                        <li> {{ item.architecture }} </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

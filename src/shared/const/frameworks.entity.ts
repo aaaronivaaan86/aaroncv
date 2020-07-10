@@ -1,7 +1,7 @@
 export const Frameworks = [    
     {
         lang: 'C#',
-        icon: '',
+        icon: '../../assets/icons/c_sharp.ico',
         fw: [
             {
                 id: 1,
@@ -25,6 +25,7 @@ export const Frameworks = [
     },
     {
         lang: 'TS',
+        icon: '../../assets/icons/ts.ico',
         fw: [
             {
                 id: 1,

@@ -1,0 +1,13 @@
+
+.experience {
+    position: absolute;
+    display: flex;
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: lightgoldenrodyellow ;
+    background-size: cover;
+    background-position: center center; 
+    margin: 0;
+    padding-top: 5vh;
+    font-size: 0.9rem;
+}

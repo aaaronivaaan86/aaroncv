@@ -4,28 +4,28 @@ export const  Languages =  {
         reading: '100',
         writing: '100',
         speaking: '100',
-        icon: ''
+        icon: '&#127790;'
     },
     english: {
         name: '',
         reading: '90',
         writing: '80',
         speaking: '80',
-        icon: ''
+        icon: '&#127828;'
     },
     freanch: {
         name: '',
         reading: '70',
         writing: '30',
         speaking: '30',
-        icon: ''
+        icon: '&#127839;'
     },
     latin: {
         name: '',
         reading: '40',
         writing: '-',
         speaking: '-',
-        icon: ''
+        icon: '&#127806;'
     }
 
 }

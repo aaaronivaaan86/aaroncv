@@ -1,20 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
+
+import { ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
 
-import { Educations } from '../../shared/models/education';
+import { Educations } from '../../shared/const/education';
 import { SharedService } from '../../shared/services/shared.service';
 import { Education } from '../../shared/models/education.entity';
-import { Languages } from '../../shared/models/languages.entity';
-import { Language } from '../../shared/models/language.entity';
+import { Languages } from '../../shared/const/languages.entity';
+
 import { TranslateService } from '@ngx-translate/core';
 import { CvSections } from '../../shared/const/cv-sections.enum';
-import { Techs } from '../../shared/models/techs.entity';
-import { OS } from '../../shared/models/operative.systems.entity';
-import { DB } from '../../shared/models/db.entity';
-import { ControlVersion } from '../../shared/models/control-version.entity';
-import { AnotherTech } from '../../shared/models/another-tech.entity';
-import { Frameworks } from '../../shared/models/frameworks.entity';
+import { Techs } from '../../shared/const/techs.entity';
+import { OS } from '../../shared/const/operative.systems.entity';
+
+import { DB } from '../../shared/const/db.entity';
+import { ControlVersion } from '../../shared/const/control-version.entity';
+import { AnotherTech } from '../../shared/const/another-tech.entity';
+import { Frameworks } from '../../shared/const/frameworks.entity';
+
+import { CvSkilsVisibility }   from '../../shared/const/cv-sections-visibility';
 
 @Component({
   selector: 'app-skills',
@@ -22,6 +26,9 @@ import { Frameworks } from '../../shared/models/frameworks.entity';
   styleUrls: ['./skills.component.css'],
 })
 export class SkillsComponent implements OnInit {
+
+  public skillsVisibility = CvSkilsVisibility;
+
   public activeLang = 'es';
   private dot = '.';
   private education = 'education';
@@ -44,6 +51,15 @@ export class SkillsComponent implements OnInit {
   public ot = AnotherTech;
   public cv = ControlVersion;
   public fwArr = [];
+
+  draggable = {
+    // note that data is handled with JSON.stringify/JSON.parse
+    // only set simple data or POJO's as methods will be lost 
+    data: "myDragData",
+    effectAllowed: "all",
+    disable: false,
+    handle: false
+  };
 
   // PolarArea
   public barChartOptions =  {
@@ -79,7 +95,8 @@ export class SkillsComponent implements OnInit {
     private sharedService: SharedService,
     private translate: TranslateService
   ) {
-    this.translate.setDefaultLang(this.activeLang);
+    // this.translate.setDefaultLang(this.activeLang);
+    this.sharedService.seDefaulttLanguage();
   }
 
   ngOnInit(): void {
@@ -228,4 +245,15 @@ export class SkillsComponent implements OnInit {
   }
 
   //#endregion
+
+  //#region Visibility
+  public changeVisibility(skill: string) {
+    // console.log(skill);    
+    this.skillsVisibility[skill].visible = !this.skillsVisibility[skill].visible;
+  }
+ 
+  //#endregion
+
+
+
 }

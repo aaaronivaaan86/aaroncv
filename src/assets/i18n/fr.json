@@ -1,12 +1,12 @@
 {
     "proof": "PROOOOF",
-    "educationTitle": "EDUCACIÓN UNIVERSITARIA",
-    "overviewTitle": "SEMBLANZA",
+    "educationTitle": "ÉDUCATION UNIVERSITAIRE",
+    "overviewTitle": "SEMBLANT",
     "certificationsTitle": "CERTIFICACIONES",
-    "otherCoursesTitle": "OTROS CURSOS",
-    "languagesTitle": "IDIOMAS",
-    "techTitle": "INFRAESTRUCTURA",
-    "programmingLangTitle": "LENGUAJES DE PROGRAMACIÓN",
+    "otherCoursesTitle": "D'AUTRES COURS",
+    "languagesTitle": "LANGUES",
+    "techTitle": "INFRASTRUCTURE",
+    "programmingLangTitle": "LANGAGES DE PROGRAMMATION",
     "framworksTitle": "FRAMEWORKS",
     "professionalExperienceTitle": "EXPERIENCIA PROFESIONAL",
     "language": "Lenguaje",
@@ -14,39 +14,39 @@
     "education": {
         "comScienceBach": {
             "grade": "Lic.",
-            "career": "Cienciass de la Computación",
+            "career": "science informatique",
             "state": "",
             "thesis": ""
         },
         "philMaster": {
-            "grade": "Maestría",
-            "career": "Filosofía",
-            "state": "| Titulado con Honores",
-            "thesis": "Historia del cartesianismo en México 1950-2000. Una estética cartesiana"
+            "grade": "Maîtrise",
+            "career": "Philosophie",
+            "state": "| Titré avec honneurs",
+            "thesis": "Historie du cartésianisme au Mexique 1950-2000. Une esthétique cartésienne"
         },
         "ecoSpecialization": {
             "grade": "Especialización",
-            "career": "Historia del Pensamiento Económico",
-            "state": "| Titulado",
-            "thesis": "Historia de la constitución del ejército mexicano moderno"
+            "career": "Historie de la  Pensée économique",
+            "state": "| Titré",
+            "thesis": "Histoire de la constitution de l'armée mexicaine moderne"
         },
         "philBach": {
             "grade": "Lic.",
-            "career": "Filosofía",
-            "state": "| Titulado con Honores",
-            "thesis": "Contribuciones para una estética cartesiana"
+            "career": "Philosophie",
+            "state": "| Titré avec honneurs",
+            "thesis": "Contributions à une esthétique cartésienne"
         }
     },
     "certifications": {
         "PY": {
             "title": "Python data structures",
             "host": "Edx / U. Michigan",
-            "state": "Acreditado"
+            "state": "Accrédité"
         },
         "MCSA": {
             "title": "MCSA: Web Applications",
             "host": "Microsoft",
-            "state": "Cursando"
+            "state": "En train d'étudier"
         }
     },
     "courses": {
@@ -73,13 +73,13 @@
     },
     "languages": {
         "language": {
-            "spanish": "Español",
-            "english": "Inglés",
-            "freanch": "Francés",
-            "latin": "Latín"
+            "spanish": "Espagnol",
+            "english": "Anglais",
+            "freanch": "Français",
+            "latin": "Latin"
         },
         "skills": {
-            "language": "Idioma",
+            "language": "Langage",
             "reading": "Lectura",
             "writing": "Escritura",
             "speaking": "Conversación"
@@ -87,18 +87,18 @@
         
     },
     "technologies": {
-        "th_1_WorkProcess": "Procesos de Trabajo",
-        "th_2_Servers": "Servidores",
-        "th_3_Architectures": "Arquitecturas",
+        "th_1_WorkProcess": "Processus de travail",
+        "th_2_Servers": "Les serveurs",
+        "th_3_Architectures": "Architectures",
         "th_4_SO": "SISTEMAS OPERATIVOS",
-        "th_5_BD": "BASES DE DATOS",
-        "th_6_Control_Version": "CONTROLADORES DE VERSIONES",
-        "th_7_Other": "DESPLIEGUE"
+        "th_5_BD": "BASE DE DONNÉES",
+        "th_6_Control_Version": "CONTRÔLEURS DE VERSION",
+        "th_7_Other": "DÉPLOIEMENT"
     },
     "professionalExp": {
-        "responsabilities": "Principales responsabilidades",
-        "techs": "Tecnologías",
-        "architecture": "Arquitectura"
+        "responsabilities": "Principales responsabilités",
+        "techs": "Les technologies",
+        "architecture": "Architecture"
     },
     "experience": {
         "main": {
@@ -106,25 +106,25 @@
             "personalProjects": "PROYECTOS PERSONALES"  
         },
         "table": {
-            "responsabilities": "Principales responsabilidades",
-            "techs": "Tecnologías",
-            "arch": "Arquitectura"
+            "responsabilities": "Principales responsabilités",
+            "techs": "Les technologies",
+            "arch": "Architecture"
         },
         "personal": {
             "stylometry": {
-                "title": "Cuerdas en el aire. Contribución estilométrica al estudio de la obra de Bolívar Echeverría"
+                "title": "Cordes en l'air. Contribution stylométrique à l'étude des travaux de Bolívar Echeverría"
             },
             "cartesianism": {
-                "title": "El cartesianismo en México"
+                "title": "Cartésianisme au Mexique"
             },
             "afiliator": {
-                "title": "Afiliador SP"
+                "title": "Afiliator SP"
             },
             "report": {
                 "title": "Intelligent Report"
             },
             "cartography": {
-                "title": "Cartografía de la literatura mexicana. Siglos XIX y XX"
+                "title": "Cartographie de la littérature mexicaine. XIX et XX siècles"
             }
         }
     }
