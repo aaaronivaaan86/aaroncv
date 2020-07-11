@@ -4,7 +4,7 @@
     display: flex;
     min-width: 100%;
     min-height: 100vh;
-    background-color: lightgoldenrodyellow ;
+    /* background-color: lightgoldenrodyellow ; */
     background-size: cover;
     background-position: center center; 
     margin: 0;

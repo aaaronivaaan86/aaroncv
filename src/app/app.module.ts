@@ -7,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from "@angular/material/button";
 import {MatCardModule} from '@angular/material/card';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ChartsModule } from 'ng2-charts';
@@ -25,7 +25,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
-import {MatToolbarModule} from '@angular/material/toolbar';
+
 import { StyleManagerService } from 'src/shared/services/style-manager.service';
 
 
@@ -52,7 +52,6 @@ import { StyleManagerService } from 'src/shared/services/style-manager.service';
     ChartsModule,
     TranslateModule.forRoot({
       loader: {
-        // https://medium.com/angular-chile/aplicaciones-multilenguaje-en-angular-7-con-ngx-translate-db8d1e7b380c
         provide: TranslateLoader,
         useFactory: (http: HttpClient) => {
           return new TranslateHttpLoader(http);

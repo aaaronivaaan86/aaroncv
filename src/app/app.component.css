@@ -8,9 +8,17 @@
   position: relative;
   display: flex;
   /* overflow-x: hidden; */
-  min-height: 100vh;
+  min-height: 120vh;
   width: 100%;
+  color: black;
 }
 
 
- 
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -38,7 +38,7 @@ function getExistingLinkElementByKey(key: string) {
 
 function createLinkElementWithKey(key: string) {
   const linkEl = document.createElement("link");
-  // linkEl.setAttribute("rel", "stylesheet");
+  linkEl.setAttribute("rel", "stylesheet");
   linkEl.classList.add(getClassNameForKey(key));
   document.head.appendChild(linkEl);
   return linkEl;
