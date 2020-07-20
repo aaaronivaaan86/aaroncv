@@ -1,5 +1,10 @@
+<div class="container-fluid">
+	<app-menu class=" "></app-menu>
+	<main class="mat-drawer-container "
+		  [ngClass] = "{'main-bg': showImgBg } "
+			[@fadeAnimation]="getRouterOutletState(o)" >
+		<router-outlet class="router-outlet"   #o="outlet"></router-outlet>
+	 </main>
+</div>
 
-<app-menu class="app-nav-bar"></app-menu>
-<main class="main  mat-drawer-container "  [@fadeAnimation]="getRouterOutletState(o)" >
-	<router-outlet class="router-outlet"   #o="outlet"></router-outlet>
- </main>
+

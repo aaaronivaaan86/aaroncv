@@ -3,6 +3,7 @@ import { SharedService } from 'src/shared/services/shared.service';
 import { ThemeService } from '../../shared/services/theme.service';
 import { StyleOption } from 'src/shared/models/style-option.entity';
 import { Observable } from 'rxjs';
+import { StyleManagerService } from 'src/shared/services/style-manager.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class MenuComponent implements OnInit {
  public isCollapsed = false;
  options$: Observable<Array<StyleOption>> = this.themeService.getThemeOptions();
 
-  constructor(private sharedService: SharedService, private themeService: ThemeService ) { }
+  constructor(private sharedService: SharedService, private themeService: ThemeService, private styleManagerService: StyleManagerService ) { }
 
   ngOnInit(): void {
         this.themeService.setTheme("deeppurple-amber");
@@ -24,6 +25,7 @@ export class MenuComponent implements OnInit {
 
   public setCustomeLan(lang: string) {
     this.sharedService.setCustomeLang(lang);
+
   }
 
   public themeChangeHandler(themeToSet: string ) {
@@ -31,5 +33,10 @@ export class MenuComponent implements OnInit {
     
     this.themeService.setTheme(themeToSet);
   }
+
+  public showBgImg() {
+    this.styleManagerService.changeBgStyle();
+  }
+
 
 }

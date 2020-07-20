@@ -9,7 +9,7 @@ export const AnotherTech = [
         id: 2,
         name: 'Kubernetes',
         class: 'green',
-        icon: '&#128261;'
+        icon: '&#9889;'
 
     }
 ]

@@ -87,7 +87,7 @@
         
     },
     "technologies": {
-        "th_1_WorkProcess": "Procesos de Trabajo",
+        "th_1_WorkProcess": "Procesos",
         "th_2_Servers": "Servidores",
         "th_3_Architectures": "Arquitecturas",
         "th_4_SO": "SISTEMAS OPERATIVOS",
@@ -127,7 +127,24 @@
                 "title": "Cartografía de la literatura mexicana. Siglos XIX y XX"
             }
         }
+    },    
+    "pizarnik": {
+        "strophe_1": {
+            "verse1": "esta manía de saberme ángel,",
+            "verse2": "sin edad,",
+            "verse3": "sin muerte en qué vivirme,",
+            "verse4": "sin piedad ",
+            "verse5": "ni por mi nombre, ni por mis huesos"
+        },
+        "strophe_2": {
+            "verse1": "sólo abraza a lo que fluye",
+            "verse2": "como lava del infierno"
+        }
+    },    
+    "home": {
+        "myname": "mi nombre es"
     }
+
 
 
 }

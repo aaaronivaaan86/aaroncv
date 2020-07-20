@@ -1,7 +1,12 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Output, EventEmitter } from "@angular/core";
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class StyleManagerService {
+  public showImgBg = false;
+  @Output() change: EventEmitter<boolean> = new EventEmitter();
+
+
   constructor() {}
 
   /**
@@ -24,6 +29,22 @@ export class StyleManagerService {
       document.head.removeChild(existingLinkElement);
     }
   }
+
+
+  public changeBgStyle() {
+    this.showImgBg = !this.showImgBg;
+    this.change.emit(this.showImgBg);
+    setTimeout(() => {
+      this.showImgBg = !this.showImgBg;
+      this.change.emit(this.showImgBg);
+    }, 500);
+  }
+
+
+
+
+
+
 }
 
 function getLinkElementForKey(key: string) {

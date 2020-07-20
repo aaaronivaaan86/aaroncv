@@ -1,18 +1,20 @@
-
-.app-nav-bar {
-  width: 100%;
-  z-index: 1;
+.container-fluid {
+  padding: 0;
 }
 
-.main {
-  position: relative;
-  display: flex;
-  /* overflow-x: hidden; */
+.mat-drawer-container {
   min-height: 120vh;
-  width: 100%;
-  color: black;
+  position: relative;
 }
 
+.main-bg {
+  /* background-color: black; */
+  background-image: url(../assets//img/main-bg.jpg);
+  background-color: #05A0FC;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 80%;
+}
 
 .container {
   position: relative;
@@ -22,3 +24,21 @@
   justify-content: center;
   flex-direction: column;
 }
+
+
+
+
+@media screen and (max-width:320px) {
+  .container-fluid {
+    width: max-content;
+  }
+
+  .main-bg {
+    background-size: 120%;
+  }
+  
+  
+}
+
+
+

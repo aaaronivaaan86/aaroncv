@@ -1,12 +1,51 @@
-<div  class="row  home   text-white">
-    <div class="col-lg-12 ">
-        <h1 class="text-white" >
-            {{ 'proof' | translate }}
-        </h1>
-        <h1 class="text-white" >
-            {{ 'proof' | translate }}
-        </h1>
+  <div class="row  home   ">
+    <div class="col-lg-6 text-center">
+      <div class="fire">
+        <div class="fire-left">
+          <div class="main-fire"></div>
+          <div class="particle-fire"></div>
+          <div class="particle-fire-left"></div>
+        </div>
+        <div class="fire-main">
+          <div class="main-fire"></div>
+          <div class="particle-fire"></div>
+        </div>
+        <div class="fire-right">
+          <div class="main-fire"></div>
+          <div class="particle-fire"></div>
+          <div class="particle-fire-right"></div>
 
+        </div>
+        <div class="fire-bottom">
+          <div class="main-fire"></div>
+        </div>
+      </div>
+
+      <img [src]="imgUrl" alt="welcome_img" class="welcome-img">
     </div>
 
-</div>
+
+    <div class="col-lg-6 text-white name-poem">
+      <div class="name-cont">
+        <p class="myname">
+          {{ 'home.myname' | translate }}
+        </p>
+
+        <br>
+        <p class="name">
+          <span>AARÓN</span>
+        </p>
+      </div>
+
+      <div class="poem">
+        <div class="">
+          <p *ngFor="let item of firstPart"> {{ item | translate }} </p>
+        </div>
+        <br>
+        <div>
+          <p *ngFor="let item of secondPart"> {{ item | translate }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+

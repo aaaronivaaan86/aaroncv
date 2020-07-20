@@ -2,12 +2,28 @@
 .experience {
     position: absolute;
     display: flex;
-    min-width: 100%;
-    min-height: 100vh;
-    /* background-color: lightgoldenrodyellow ; */
-    background-size: cover;
-    background-position: center center; 
     margin: 0;
+    min-height: 100vh;
+    min-width: 100%;
     padding-top: 5vh;
-    font-size: 0.9rem;
+    
+    /* font-size: 0.9rem; */
 }
+
+
+
+
+
+
+@media screen and (max-width:320px) {
+    .mat-drawer-container{
+      height: auto;
+    }
+
+    .example-card {
+        margin-bottom: 5%;
+    }
+
+    
+  }
+  

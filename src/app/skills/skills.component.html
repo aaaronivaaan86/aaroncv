@@ -1,106 +1,120 @@
 
-<div class="row skills">
+<div class="row skills mat-drawer-container">
 
     <div class="  col-lg-4 edu-cert-courses  ">
         <!-- Studies -->
-        <div class="card"     >
-            <div class="card-header" (click) = "changeVisibility('education')">
+        <mat-card class="example-card">
+            <mat-card-header (click) = "changeVisibility('education')">
+              <mat-card-title>
                 {{ 'educationTitle' | translate }}
-            </div>
-            <div class="card-body" *ngIf="skillsVisibility.education.visible">
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="skillsVisibility.education.visible">
                 <ul *ngFor="let item of educationsArr">
                     <li> {{  item.grade | translate }} {{  item.career | translate }} </li>
                     <ul>
                         <li> {{  item.university | translate }} | {{  item.years | translate }}
                             {{  item.state | translate }} </li>
                     </ul>
-                </ul>
-            </div>
-        </div>
-
+                </ul>          
+            </mat-card-content>
+          
+          </mat-card>
+          
         <!-- Certifications -->
-        <div class="card" >
-            <div class="card-header" (click) = "changeVisibility('certifications')">
+        <mat-card class="example-card">
+            <mat-card-header (click) = "changeVisibility('certifications')">
+              <mat-card-title>
                 {{ 'certificationsTitle' | translate }}
-            </div>
-            <div class="card-body" *ngIf="skillsVisibility.certifications.visible">
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="skillsVisibility.certifications.visible">
                 <ul *ngFor="let item of certificationsArr">
                     <li> {{  item.title  }} </li>
                     <ul>
                         <li> {{  item.host  }} | {{  item.state | translate }} </li>
                     </ul>
-                </ul>
-            </div>
-        </div>
-
+                </ul>          
+            </mat-card-content>
+          
+          </mat-card>
+          
+        
         <!-- Courses -->
-        <div class="card" (click) = "changeVisibility('courses')">
-            <div class="card-header">
+        <mat-card class="example-card">
+            <mat-card-header (click) = "changeVisibility('courses')">
+              <mat-card-title>
                 {{ 'otherCoursesTitle' | translate }}
-            </div>
-            <div class="card-body" *ngIf="skillsVisibility.courses.visible">
+          
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="skillsVisibility.courses.visible">
                 <ul *ngFor="let item of coursessArr">
                     <li> {{  item.course  }} | {{  item.host  }} | {{  item.year  }} </li>
-                </ul>
-            </div>
-        </div>
+                </ul>          
+            </mat-card-content>          
+          </mat-card>
+          
     </div>
 
     <div class="col-lg-4">
+
         <!-- Languages -->
-        <div class="card">
-            <div class="card-header" (click) = "changeVisibility('languages')">
-                {{ 'languagesTitle' | translate }}            
-            </div>
-            <div class="card-body text-center langs" *ngIf="skillsVisibility.languages.visible">
-                <table class="table table-striped  table-hover ">
-                    <thead class="thead-dark">
-                        <th *ngFor="let item of languagesHeadersArr">
-                            {{  item | translate}}
-                        </th>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let item of languagesArr">
-                            <td> <span  [innerHTML]="item.icon" ></span>   {{ item.name | translate }} </td>
-                            <td> {{ item.reading }}% </td>
-                            <td> {{ item.writing }}% </td>
-                            <td> {{ item.speaking }}% </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <mat-card class="example-card">
+          <mat-card-header (click) = "changeVisibility('languages')">
+            <mat-card-title>
+              {{ 'languagesTitle' | translate }}     
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content *ngIf="skillsVisibility.languages.visible">
+            <table class="mat-table cdk-table ">
+              <thead class="thead-dark">
+                  <th *ngFor="let item of languagesHeadersArr">
+                      {{  item | translate}}
+                  </th>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of languagesArr">
+                      <td> <span  [innerHTML]="item.icon" ></span>   {{ item.name | translate }} </td>
+                      <td> {{ item.reading }}% </td>
+                      <td> {{ item.writing }}% </td>
+                      <td> {{ item.speaking }}% </td>
+                  </tr>
+              </tbody>
+          </table>
+          </mat-card-content>        
+        </mat-card>
 
         <!-- Programming Languages -->
-        <div class="card">
-            <div class="card-header" (click) = "changeVisibility('programming')">
-                {{ 'programmingLangTitle' | translate }}
-            
-            </div>
-            <div class="card-body" *ngIf="skillsVisibility.programming.visible">
-                <div>
-                    <div>
-                        <div style="display: block">
-                        <canvas baseChart
-                            [datasets]="barChartData"
-                            [labels]="barChartLabels"
-                            [options]="barChartOptions"
-                            [legend]="barChartLegend"
-                            [chartType]="barChartType">
-                        </canvas>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-        </div>
-
+        <mat-card class="example-card">
+            <mat-card-header (click) = "changeVisibility('programming')">
+              <mat-card-title>
+                {{ 'programmingLangTitle' | translate }}          
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="skillsVisibility.programming.visible">
+                <div style="display: block">
+                    <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                    </canvas>
+                    </div>          
+            </mat-card-content>
+          
+          </mat-card>
+                    
         <!-- Frameworks -->
-        <div class="card">
-            <div class="card-header" (click) = "changeVisibility('frameworks')">
-                {{ 'framworksTitle' | translate }}
-            </div>
-            <div class="card-body" *ngIf="skillsVisibility.frameworks.visible">
-                <table class="table  table-hover">
+        <mat-card class="example-card">
+            <mat-card-header (click) = "changeVisibility('frameworks')">
+              <mat-card-title>
+                {{ 'framworksTitle' | translate }}          
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="skillsVisibility.frameworks.visible">
+                <table class="mat-table cdk-table">
                     <thead class="thead-dark">
                         <th> {{ 'language' | translate }}</th>
                         <th colspan="3"> {{ 'framework' | translate }} </th>
@@ -113,95 +127,114 @@
                             </td>
                         </tr>
                     </tbody>
-                </table>
-            </div>
-        </div>
+                </table>          
+            </mat-card-content>          
+          </mat-card>
+          
 
     </div>
     
 
     <div class="col-lg-4">
         <!-- Techs -->
-        <div class="card">
-            <div class="card-header" (click) = "changeVisibility('infrastructure')">
-                {{ 'techTitle' | translate }}
-            </div>
-            <div class="card-body"  *ngIf="skillsVisibility.infrastructure.visible">
+
+        <mat-card class="example-card">
+          <mat-card-header (click) = "changeVisibility('infrastructure')">
+            <mat-card-title>
+              {{ 'techTitle' | translate }}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content *ngIf="skillsVisibility.infrastructure.visible">
                 <!-- Work Process -->
-                <table class="table table-striped   table-hover">
-                    <thead class="thead-dark">
-                        <th> {{ techTableHd[0] | translate }}  </th>
-                        <th> {{ techTableHd[1] | translate }}  </th>
-                        <th> {{ techTableHd[2] | translate }}  </th>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let item of techs">
-                            <td> {{ item.wp }} </td>
-                            <td> {{ item.server }} </td>
-                            <td> {{ item.arch }} </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                <table class="mat-table cdk-table matTableResponsive">
+                  <thead class="thead-dark">
+                      <th> {{ techTableHd[0] | translate }}  </th>
+                      <th> {{ techTableHd[1] | translate }}  </th>
+                      <th> {{ techTableHd[2] | translate }}  </th>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of techs">
+                          <td> {{ item.wp }} </td>
+                          <td> {{ item.server }} </td>
+                          <td> {{ item.arch }} </td>
+                      </tr>
+                  </tbody>
+              </table>        
+          </mat-card-content>
+        
+        </mat-card>
+
+
+
 
         <!-- OS -->
-        <div class="card">
-            <div class="card-header" (click) = "changeVisibility('os')">
+        <mat-card class="example-card">
+            <mat-card-header (click) = "changeVisibility('os')">
+              <mat-card-title>
                 {{ techTableHd[3] | translate }}        
-            </div>
-            <div class="card-body" *ngIf="skillsVisibility.os.visible">
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content  *ngIf="skillsVisibility.os.visible">
                 <div class="d-flex">
                     <div *ngFor="let item of os"   [class] = "item.class" class="skill-sub-cont">
                         <p>  <span  [innerHTML]="item.icon" ></span>   {{  item.so }} </p>
                     </div>
-                </div>
-            </div>
-        </div>
-
+                </div>          
+            </mat-card-content>
+          
+          </mat-card>
+          
         <!-- Data Base -->
-        <div class="card">
-            <div class="card-header" (click) = "changeVisibility('db')">
-                {{ techTableHd[4] | translate }}
-            </div>
-            <div class="card-body"  *ngIf="skillsVisibility.db.visible">
+        <mat-card class="example-card">
+            <mat-card-header (click) = "changeVisibility('db')">
+              <mat-card-title>
+                {{ techTableHd[4] | translate }}          
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="skillsVisibility.db.visible">
                 <div class="d-flex">
                     <div *ngFor="let item of db" [class] = "item.class" class="skill-sub-cont">
                          <p> <span  [innerHTML]="item.icon" ></span>   {{  item.name }} </p>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div>          
+            </mat-card-content>          
+          </mat-card>
+          
 
         <!-- CONTROL VERSION -->
-        <div class="card">
-            <div class="card-header" (click) = "changeVisibility('controlversion')">
-                {{ techTableHd[5] | translate }}                
-            </div>
-            <div class="card-body" *ngIf="skillsVisibility.controlversion.visible">
+        <mat-card class="example-card" (click) = "changeVisibility('controlversion')">
+            <mat-card-header>
+              <mat-card-title>
+                {{ techTableHd[5] | translate }}
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="skillsVisibility.controlversion.visible">
                 <div class="d-flex">
                     <div  *ngFor="let item of cv" [class] = "item.class" class="skill-sub-cont">
-                        <p> <span  [innerHTML]="item.icon" ></span>  {{  item.name }}  </p>
-                        
+                        <p> <span  [innerHTML]="item.icon" ></span>  {{  item.name }}  </p>                        
                     </div>
-                </div>
-            </div>
-        </div>
+                </div>          
+
+            </mat-card-content>          
+          </mat-card>
+          
 
         <!-- DEPLOY -->
-        <div class="card">
-            <div class="card-header" (click) = "changeVisibility('deploy')">
+        <mat-card class="example-card">
+            <mat-card-header  (click) = "changeVisibility('deploy')">
+              <mat-card-title>
                 {{ techTableHd[6] | translate }}
-            </div>
-            <div class="card-body" *ngIf="skillsVisibility.deploy.visible">
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content *ngIf="skillsVisibility.deploy.visible">
                 <div class="d-flex">
                     <div  *ngFor="let item of ot" [class] = "item.class" class="skill-sub-cont">
                         <p> <span  [innerHTML]="item.icon" ></span>  {{  item.name }}  </p>
                     </div>
                 </div>
-            </div>
-        </div>
-
+            </mat-card-content>
+          
+          </mat-card>
 
     </div>
 

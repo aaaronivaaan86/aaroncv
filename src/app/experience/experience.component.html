@@ -1,11 +1,13 @@
-<div class="row experience">
-
-    <div class="col-lg-6">
-        <div class="card">
-            <div class="card-header">
+<div class="row experience mat-drawer-container">
+    <div class="col-sm-12 col-lg-6">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>
                 {{  'experience.main.profesionalExperience'  | translate  }}
-            </div>
-            <div class="card-body">
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
                 <ul *ngFor="let item of proffesional" >
                     <li>  {{ item.title }}  </li>
                     <ul>
@@ -16,28 +18,33 @@
                         <li> {{ item.architecture }} </li>
                     </ul>
                 </ul>
-            </div>
-        </div>
+            </mat-card-content>          
+          </mat-card>
     </div>
 
+
+    
     <div class="col-lg-6">
-        <div class="card">
-            <div class="card-header">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>
                 {{  'experience.main.personalProjects'  | translate  }}
-            </div>
-            <div class="card-body">
+               </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
                 <ul *ngFor="let item of personalArr" >
                     <li>  {{ item.title | translate }}  </li>
                     <ul>
                         <li> {{ item.project }} </li>
-                        <li> <a [href]="item.link" target="_blank"  > {{ item.link }}</a>  </li>
+                        <li> <a [href]="item.link" target="_blank"  > {{ item.displayLink }}</a>  </li>
                         <li> {{ item.responsabilities }} </li>
                         <li> {{ item.technologies }} </li>
                         <li> {{ item.architecture }} </li>
                     </ul>
                 </ul>
-            </div>
-        </div>
+            </mat-card-content>
+          </mat-card>
     </div>
 
 </div>

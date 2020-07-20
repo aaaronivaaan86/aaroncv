@@ -127,6 +127,22 @@
                 "title": "Cartography of mexican literature. Sielces XIX-XX"
             }
         }
+    },
+    "pizarnik": {
+        "strophe_1": {
+            "verse1": "esta manía de saberme ángel,",
+            "verse2": "sin edad,",
+            "verse3": "sin muerte en qué vivirme,",
+            "verse4": "sin piedad por mi nombre",
+            "verse5": "ni por mis huesos"
+        },
+        "strophe_2": {
+            "verse1": "sólo abraza a lo que fluye",
+            "verse2": "como lava del infierno"
+        }
+    },
+    "home": {
+        "myname": "Mi nombre es"
     }
 
 
