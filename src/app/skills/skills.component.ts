@@ -91,7 +91,7 @@ export class SkillsComponent implements OnInit {
     'Html',
   ];
   public barChartData: ChartDataSets[] = [
-    { data: [50, 80, 90, 70, 70, 80, 80, 90, 95], label: 'Lenguages' },
+    { data: [50, 80, 90, 70, 70, 80, 80, 90, 95], label: 'Languages' },
   ];
   public barChartLegend = true;
   // public barChartPlugins = [pluginDataLabels];
@@ -225,10 +225,6 @@ export class SkillsComponent implements OnInit {
       // console.log(element);
       this.fwArr.push(element);
     });
-
-    console.log(this.fwArr);
-    
-
   }
 
   //#endregion

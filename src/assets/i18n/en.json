@@ -13,7 +13,7 @@
     "framework": "FRAMEWORK",
     "education": {
         "comScienceBach": {
-            "grade": "BAch.",
+            "grade": "Bach.",
             "career": "Computer Science",
             "state": "",
             "thesis": ""
@@ -92,7 +92,7 @@
         "th_3_Architectures": "Architectures",
         "th_4_SO": "OPERATIVE SYSTEMS",
         "th_5_BD": "DATA BASES",
-        "th_6_Control_Version": "VERSON CONTROLERS",
+        "th_6_Control_Version": "VERSION CONTROLERS",
         "th_7_Other": "DEPLOY"
     },
     "professionalExp": {
@@ -142,7 +142,7 @@
         }
     },
     "home": {
-        "myname": "Mi nombre es"
+        "myname": "My name is"
     }
 
 

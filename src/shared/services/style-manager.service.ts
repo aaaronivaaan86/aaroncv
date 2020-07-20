@@ -39,12 +39,6 @@ export class StyleManagerService {
       this.change.emit(this.showImgBg);
     }, 500);
   }
-
-
-
-
-
-
 }
 
 function getLinkElementForKey(key: string) {

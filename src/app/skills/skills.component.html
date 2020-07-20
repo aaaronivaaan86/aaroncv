@@ -229,7 +229,7 @@
             <mat-card-content *ngIf="skillsVisibility.deploy.visible">
                 <div class="d-flex">
                     <div  *ngFor="let item of ot" [class] = "item.class" class="skill-sub-cont">
-                        <p> <span  [innerHTML]="item.icon" ></span>  {{  item.name }}  </p>
+                        <p> <span  [innerHTML]="item.icon" alt="icon"></span>  {{  item.name }}  </p>
                     </div>
                 </div>
             </mat-card-content>

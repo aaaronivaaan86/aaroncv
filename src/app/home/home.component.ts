@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
 
   getContent() {
     this.sharedService.gatLangFile().subscribe(data => {
-      
       const poem = data[this.pizarnik];
       Object.keys(poem).forEach(key => {
         this.keysArr.push(key);
@@ -40,17 +39,9 @@ export class HomeComponent implements OnInit {
         this.firstPart.push(this.pizarnik + this.dot + this.keysArr[0] + this.dot + el);
       })
 
-      console.log(this.firstPart);
-      
-
-
       Object.keys(poem[ this.keysArr[1]]).forEach(el => {
         this.secondPart.push(this.pizarnik + this.dot + this.keysArr[1] + this.dot + el);
       })
-
-      
-      console.log(this.secondPart);
-      
     })
   }
 

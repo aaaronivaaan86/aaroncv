@@ -1,12 +1,13 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span *ngIf="!isCollapsed" class="d-flex d-xs-none ">
-      <a class="nav-link text-white" routerLink=""  (click)="showBgImg()"  >Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link text-white" routerLink="/skills" routerLinkActive="active-link" (click)="showBgImg()">Skills</a>
-      <a class="nav-link text-white" routerLink="/eexperience" routerLinkActive="active-link" (click)="showBgImg()">Work</a>
-
+      <a class="nav-link text-white" routerLink="" (click)="showBgImg()">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link text-white" routerLink="/skills" routerLinkActive="active-link"
+        (click)="showBgImg()">Skills</a>
+      <a class="nav-link text-white" routerLink="/eexperience" routerLinkActive="active-link"
+        (click)="showBgImg()">Work</a>
       <button mat-button [matMenuTriggerFor]="menu">
-        <mat-icon>language</mat-icon>
+        <mat-icon alt="language">language</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item (click)="setCustomeLan('es')">ES</button>
@@ -14,19 +15,16 @@
         <button mat-menu-item (click)="setCustomeLan('fr')">FR</button>
       </mat-menu>
 
-
       <button mat-button>
         <app-theme-menu [options]="options$ | async" (themeChange)="themeChangeHandler($event)">
         </app-theme-menu>
       </button>
-
-
     </span>
 
     <!-- <button mat-icon-button class="d-lg-none d-md-block" aria-label="menu" color="primary"
       (click)="isCollapsed = !isCollapsed">
       <mat-icon>menu</mat-icon>
     </button> -->
-    
+
   </mat-toolbar-row>
 </mat-toolbar>

@@ -31,7 +31,7 @@ export const PersonalExperience  = {
     },
     report:
     {
-        title: 'FRONT END DEVELOPPER | BRAIN UP SYSTEMS | NOV-16 / JUN-17',
+        title: 'FRONT END DEVELOPER | Key Capital | NOV-16 / JUN-17',
         project: 'Intelligent Report',
         link: '',
         displayLink: '',

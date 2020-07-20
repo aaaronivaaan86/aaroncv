@@ -2,7 +2,7 @@
     "proof": "PROOOOF",
     "educationTitle": "ÉDUCATION UNIVERSITAIRE",
     "overviewTitle": "SEMBLANT",
-    "certificationsTitle": "CERTIFICACIONES",
+    "certificationsTitle": "CERTIFICATIONS",
     "otherCoursesTitle": "D'AUTRES COURS",
     "languagesTitle": "LANGUES",
     "techTitle": "INFRASTRUCTURE",
@@ -90,7 +90,7 @@
         "th_1_WorkProcess": "Processus de travail",
         "th_2_Servers": "Les serveurs",
         "th_3_Architectures": "Architectures",
-        "th_4_SO": "SISTEMAS OPERATIVOS",
+        "th_4_SO": "SYSTÈME D'EXPLOITATION",
         "th_5_BD": "BASE DE DONNÉES",
         "th_6_Control_Version": "CONTRÔLEURS DE VERSION",
         "th_7_Other": "DÉPLOIEMENT"
@@ -102,8 +102,8 @@
     },
     "experience": {
         "main": {
-            "profesionalExperience": "EXPERIENCIA PROFESIONAL",
-            "personalProjects": "PROYECTOS PERSONALES"  
+            "profesionalExperience": "EXPERIENCE PROFESSIONNALE",
+            "personalProjects": "PROJECTS PERSONNELS"  
         },
         "table": {
             "responsabilities": "Principales responsabilités",
@@ -127,6 +127,22 @@
                 "title": "Cartographie de la littérature mexicaine. XIX et XX siècles"
             }
         }
+    },
+    "pizarnik": {
+        "strophe_1": {
+            "verse1": "esta manía de saberme ángel,",
+            "verse2": "sin edad,",
+            "verse3": "sin muerte en qué vivirme,",
+            "verse4": "sin piedad por mi nombre",
+            "verse5": "ni por mis huesos"
+        },
+        "strophe_2": {
+            "verse1": "sólo abraza a lo que fluye",
+            "verse2": "como lava del infierno"
+        }
+    },
+    "home": {
+        "myname": "mon nom est "
     }
 
 
