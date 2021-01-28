@@ -204,8 +204,8 @@ export class SkillsComponent implements OnInit {
       this.languagesHeadersArr.push(
         CvSections.languages + this.dot + element[0] + this.dot + el
       );
-      // console.log(language);
     });
+    // console.log(this.languagesHeadersArr);
   }
   //#endregion
 
