@@ -24,9 +24,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
-
-
 import { StyleManagerService } from 'src/shared/services/style-manager.service';
+import { AnimationService } from '../shared/services/animation.service';
+
 
 
 @NgModule({
@@ -61,7 +61,7 @@ import { StyleManagerService } from 'src/shared/services/style-manager.service';
       }
     })
   ],
-  providers: [HttpClient, StyleManagerService ],
+  providers: [HttpClient, StyleManagerService, AnimationService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

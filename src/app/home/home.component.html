@@ -1,8 +1,8 @@
 <div class="row home-row">
   
   <div class="col-lg-12   water-home">
-    <div>
-      <h1>
+    <div class="float-right water-msg-div ">
+      <h1 class="water-msg">
         {{ homeStrings[1] | translate }}
       </h1>
     </div>
@@ -15,17 +15,27 @@
 
    <div class="col-lg-12 water-home">
     <img [src]="imgUrl"  alt="moon"  class="sky-moon">
+    <div class="float-left sky-msg-div ">
+      <h1 class="water-msg">
+        {{ homeStrings[2] | translate }}
+      </h1>
+    </div>
     
   </div>
 
 
   <div class="col-lg-12 h-100 star-girl">
+
+    <!-- <div class="glowing">
+      <span style="--i:1"></span>
+      <span style="--i:1"></span>
+      <span style="--i:1"></span>
+    </div> -->
+
     <div class="h-100 star-girl-img">
-
     </div>
-
-
     <!-- <img [src]="starGirlImgUrl"  alt="moon"  > -->
+
   </div>
 
 

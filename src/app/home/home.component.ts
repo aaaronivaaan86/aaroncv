@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { SharedService } from 'src/shared/services/shared.service';
+import { AnimationService } from '../../shared/services/animation.service';
+import { SharedService } from '../../shared/services/shared.service';
 
 
 @Component({
@@ -30,14 +31,20 @@ export class HomeComponent implements OnInit {
   public homeStrings = [];
 
   
-  constructor(private translate: TranslateService, private sharedService: SharedService,) {
+  constructor( private translate: TranslateService, 
+               private sharedService: SharedService,
+               private animationService: AnimationService
+               ) {
     this.translate.setDefaultLang(this.activeLang);
 
    }
 
   ngOnInit(): void {
-    this.getContent();
+    this.getStrings();
+    this.fadeGsap();
     
+
+
   }
   
   // ngAfterViewInit() {
@@ -45,15 +52,12 @@ export class HomeComponent implements OnInit {
   //   this.renderCanvas();
   // }
   
-  getContent() {
+  getStrings() {
     this.sharedService.gatLangFile().subscribe(element => {
       //  this.homeStrings = data[this.homeData];
        Object.keys(element[ this.homeData]).forEach((el) => {
         console.log(el);
         this.homeStrings.push(this.homeData + this.dot + el);
-
-
-
       });
     });
   }
@@ -101,9 +105,6 @@ export class HomeComponent implements OnInit {
 
   }
 
-
-
-
   // getStars(): Array<any> {
   //   console.log('GET STAR');  
   //   const ArrayCapacity = 100;
@@ -146,7 +147,9 @@ export class HomeComponent implements OnInit {
 
 
 
-
+  private fadeGsap() {
+    this.animationService.fadeGsap('.water-msg');
+  }
 
 }
 
