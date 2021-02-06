@@ -16,8 +16,8 @@
     {
       "backgroundColor": "#303030",
       "buttonColor": "#607d8b",
-      "headingColor": "#e91e63",
-      "label": "The Door",
+      "headingColor": "#000000",
+      "label": "Gravity",
       "value": "pink-bluegrey"
     },
     {
@@ -28,6 +28,4 @@
       "value": "purple-green"
     }
   ]
-  
-
   

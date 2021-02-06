@@ -142,7 +142,11 @@
         }
     },
     "home": {
-        "myname": "mon nom est "
+        "myname": "mon nom est",
+        "watter-moon": "dans l'eau",
+        "sky-moon": "une lune",
+        "sky-girl": "reflète mon espirit "
+
     }
 
 

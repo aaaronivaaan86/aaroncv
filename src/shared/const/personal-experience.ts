@@ -44,7 +44,7 @@ export const PersonalExperience  = {
         title: 'FRONT END ARCHITECT | 2016-17',
         project: 'Cartografía de la literatura mexicana. Siglos XIX y XX',
         link: 'https://aaroncv-f6e1e.firebaseapp.com',
-        displayLink: 'cartografialiteraturamexicana.com.mx/',
+        displayLink: 'cartografialiteraturamexicana',
         responsabilities: 'FE',
         technologies: 'Firebase, Angular',
         architecture: 'MVC'

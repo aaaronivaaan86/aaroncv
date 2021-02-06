@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { AnimationService } from '../../shared/services/animation.service';
 import { SharedService } from '../../shared/services/shared.service';
 
+declare var $: any;
 
 @Component({
   selector: 'app-home',
@@ -11,26 +12,23 @@ import { SharedService } from '../../shared/services/shared.service';
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('myCanvas') myCanvas: ElementRef;
-  private ctx: CanvasRenderingContext2D;
+  @ViewChild('waterCanvas') waterCanvas: ElementRef;
+  public waterCtx: CanvasRenderingContext2D;
   private canvasHeight = window.innerHeight;
   private canvasWidth = window.innerWidth;
   private  maxStarRadius = 1.5;
 
+  @ViewChild('skyCanvas', { static: true }) skyCanvas: ElementRef<HTMLCanvasElement>;
+  public skyCtx: CanvasRenderingContext2D;
 
   public imgUrl = '../../assets/img/moon.png';
-  public starGirlImgUrl = '../../assets/img/star-girl.png';
-
-
+  public starGirlImgUrl = '../../assets/img/star-girl-purple.png';
 
   public activeLang = 'es';
   public homeData = 'home';
   private dot = '.';
-
-
   public homeStrings = [];
 
-  
   constructor( private translate: TranslateService, 
                private sharedService: SharedService,
                private animationService: AnimationService
@@ -39,20 +37,28 @@ export class HomeComponent implements OnInit {
 
    }
 
+   //#region //* LYFECYCLES
   ngOnInit(): void {
     this.getStrings();
-    this.fadeGsap();
+    this.fadeGsap();  
+  }
+  
+  ngAfterViewInit() {
+    this.waterCtx = this.waterCanvas.nativeElement.getContext('2d');
     
+    this.renderWaterSkyField();
+    // this.resizeCanvaas();
+    this.renderWaterRippleEffect();
+
+    
+    this.renderSkyStars();
 
 
   }
-  
-  // ngAfterViewInit() {
-  //   this.ctx = this.myCanvas.nativeElement.getContext('2d');
-  //   this.renderCanvas();
-  // }
-  
-  getStrings() {
+
+  //#endregion
+
+  private getStrings() {
     this.sharedService.gatLangFile().subscribe(element => {
       //  this.homeStrings = data[this.homeData];
        Object.keys(element[ this.homeData]).forEach((el) => {
@@ -62,61 +68,45 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  private fadeGsap() {
+    this.animationService.fadeGsap('.water-msg');
+    this.animationService.fadeSKyMsg('.sky-msg');
+  }
 
-  renderCanvas() {
-    this.myCanvas.nativeElement.width = window.innerWidth;
-    this.myCanvas.nativeElement.height = window.innerHeight;
-    this.ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-    // this.ctx.fillRect(20,20,window.innerWidth,window.innerHeight);
+  private renderWaterRippleEffect() {
+    $('#water-home').ripples({
+      resolution: 900,
+      dropRadius: 20,
+      perturbance: 0.08,
+    })
+  }
 
+  //#region //* WATER SKY
+  private renderWaterSkyField() {
+    this.waterCanvas.nativeElement.width = window.innerWidth;
+    this.waterCanvas.nativeElement.height = window.innerHeight;
+    this.waterCtx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    // this.waterCtx.fillRect(20,20,window.innerWidth,window.innerHeight);
 
-    const stars = this.createStars(window.innerWidth,window.innerHeight, 60);
+    const stars = this.createWaterStars(window.innerWidth,window.innerHeight, 60);
     stars.forEach(star => {
       const x = star.x;
       const y = star.y;
       const r = star.r;
       this.fillCirlce(x, y, r, "rgb(255, 255, 255)");
     });
-  }  
-
-
-  loop() {
-    // console.log(this.getStars());
-    // const stars: Array<any> = this.getStars();
-    
-
-    this.ctx.fillStyle = 'rgba(1, 5, 22, 0.3)';
-    this.ctx.fillRect(0,0,this.canvasHeight,this.canvasWidth);
-    // stars.forEach(star => {
-    //   star.a += star.s,
-    //   this.ctx.beginPath();
-    //   this.ctx.arc(Math.cos(star.a) * star.r + this.canvasHeight / 2,
-    //               Math.sin(star.a) * star.r +  this.canvasHeight / 2,
-    //               2,
-    //               0,
-    //                 Math.PI * 2);
-    //   this.ctx.closePath();
-    //   this.ctx.fillStyle = 'white';
-    //   this.ctx.fill();
-              
-    // });
-
-    requestAnimationFrame(this.loop);
-
   }
 
-  // getStars(): Array<any> {
-  //   console.log('GET STAR');  
-  //   const ArrayCapacity = 100;
-  //   const stars = new Array(ArrayCapacity).fill(ArrayCapacity).map(() => {
-  //     return { r: this.getRandom(this.canvasHeight), s: this.getRandom(0.01), a: this.getRandom(Math.PI* 2)    }
-  //   });
-  //   return stars;
-  // }
+  private fillCirlce(x, y, r, fillStyle) {
+    this.waterCtx.beginPath();
+    this.waterCtx.fillStyle = fillStyle;
+    this.waterCtx.arc(x, y, r, 0, Math.PI * 2);
+    this.waterCtx.fill();
+  }
 
-  private createStars(width: number, height: number, spacing: number ) {
-    const stars = [];
-  
+
+  private createWaterStars(width: number, height: number, spacing: number ) {
+    const stars = [];  
     for (let x = 0; x < width; x += spacing) {
       for (let y = 0; y < height; y += spacing) {
         const star = {
@@ -131,25 +121,70 @@ export class HomeComponent implements OnInit {
     return stars;
   }
 
+  //#endregion
 
-  private fillCirlce(x, y, r, fillStyle) {
-    this.ctx.beginPath();
-    this.ctx.fillStyle = fillStyle;
-    this.ctx.arc(x, y, r, 0, Math.PI * 2);
-    this.ctx.fill();
+
+
+  private callRenderSky() {
+    // this.renderSkyStars();
+
   }
 
+  private renderSkyStars() {
+    this.skyCtx = this.skyCanvas.nativeElement.getContext('2d');
 
+    this.skyCanvas.nativeElement.width = window.innerWidth;
+    this.skyCanvas.nativeElement.height = window.innerHeight;
+
+    this.skyCtx.fillStyle = 'rgba(1, 5, 22, 0.3)';
+    this.skyCtx.fillRect(0,0,this.canvasHeight,this.canvasWidth);
+    const stars: Array<any> = this.createSkyStars();
+
+    setInterval(() => {
+      this.skyCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      stars.forEach(star => {
+        star.a += star.s,
+        this.skyCtx.beginPath();
+        this.skyCtx.arc(Math.cos(star.a) * star.r + this.canvasHeight / 2,
+                    Math.sin(star.a) * star.r +  this.canvasHeight / 2,
+                    2,
+                    0,
+                      Math.PI * 2);
+        this.skyCtx.closePath();
+        this.skyCtx.fillStyle = 'white';
+        this.skyCtx.fill();              
+      });
+    }, 50);
+
+  }
+
+  createSkyStars(): Array<any> {
+    // console.log('GET STAR');  
+    const ArrayCapacity = 100;
+    const stars = new Array(ArrayCapacity).fill(ArrayCapacity).map(() => {
+      return { r: this.getRandom(this.canvasHeight), s: this.getRandom(0.01), a: this.getRandom(Math.PI* 2)    }
+    });
+    return stars;
+  }
 
   private getRandom(n: number) {
     return Math.random() * n;
   }
 
 
-
-  private fadeGsap() {
-    this.animationService.fadeGsap('.water-msg');
+  private resizeCanvaas() {
+    window.addEventListener('resize', () => {
+      (this.waterCanvas.nativeElement.width = window.innerWidth),
+      (this.waterCanvas.nativeElement.height = window.innerHeight)
+    })
   }
+
+
+
+
+
+
+
 
 }
 

@@ -14,8 +14,7 @@ export class ThemeMenuComponent  {
   constructor(private themeService: ThemeService) {}
 
   changeTheme(themeToSet) {
-    console.log(themeToSet);
-    
+    // console.log(themeToSet);    
     this.themeChange.emit(themeToSet);
   }
 

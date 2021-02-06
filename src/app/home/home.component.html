@@ -1,43 +1,31 @@
 <div class="row home-row">
   
-  <div class="col-lg-12   water-home">
-    <div class="float-right water-msg-div ">
-      <h1 class="water-msg">
-        {{ homeStrings[1] | translate }}
-      </h1>
-    </div>
-
-
-    <!-- <canvas #myCanvas id="myCanvas"  class="col-lg-12" ></canvas> -->
-    <img [src]="imgUrl"  alt="moon"  class="water-moon">
+  <div  id="water-home"  class="col-lg-12   water-home">
+    <canvas #waterCanvas id="waterCanvas"  class="col-lg-12" ></canvas>
+    <h1 class="h1-white water-msg">
+      {{ homeStrings[1] | translate }}
+    </h1>
+    <img [src]="imgUrl"  alt="moon"  class="water-moon moon">
   </div>
 
 
    <div class="col-lg-12 water-home">
-    <img [src]="imgUrl"  alt="moon"  class="sky-moon">
-    <div class="float-left sky-msg-div ">
-      <h1 class="water-msg">
-        {{ homeStrings[2] | translate }}
-      </h1>
-    </div>
-    
+    <canvas #skyCanvas id="skyCanvas"  class="col-lg-12" ></canvas>
+    <img [src]="imgUrl"  alt="moon"  class="sky-moon moon">
+    <h1 class="h1-white sky-msg">{{ homeStrings[2] | translate }} </h1>
   </div>
 
 
-  <div class="col-lg-12 h-100 star-girl">
+  <div class="col-lg-12 h-100 animation-wrapper">
 
-    <!-- <div class="glowing">
-      <span style="--i:1"></span>
-      <span style="--i:1"></span>
-      <span style="--i:1"></span>
-    </div> -->
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
 
-    <div class="h-100 star-girl-img">
-    </div>
-    <!-- <img [src]="starGirlImgUrl"  alt="moon"  > -->
 
-  </div>
-
+    <div class="h-100 star-girl-img">    </div>
+    <h1 class="h1-white sky-girl-msg">{{ homeStrings[3] | translate }} </h1>
 
 </div>
 

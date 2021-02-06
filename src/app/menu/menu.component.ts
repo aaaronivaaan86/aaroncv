@@ -29,8 +29,7 @@ export class MenuComponent implements OnInit {
   }
 
   public themeChangeHandler(themeToSet: string ) {
-    console.log(themeToSet);
-    
+    // console.log(themeToSet);    
     this.themeService.setTheme(themeToSet);
   }
 
